@@ -1,0 +1,30 @@
+Se pide programar una clase Frase.
+
+Decide tú qué campos necesitas para almacenar la información (un "StringBuilder texto", básicamente) (¡STRINGBUILDER! No String).
+
+Deberá tener los siguientes métodos:
+
+Constructores
+Constructor por defecto que inicialice a texto vacío.
+Constructor que admita un String, que será el valor inicial de la Frase
+Constructor que admita un int repeticiones y un String cadena, en ese orden. Este constructor concatenará tantas repeticiones de la cadena como se haya pedido, separadas por espacios intermedios (la última repetición no llevará espacio al final). Por ejemplo, con (3, "hola") la Frase se inicializará a "hola hola hola". Idea: haz este constructor tras haber hecho lo demás métodos normales. Quizá alguno te sirva.
+método "public char caracterEn(int posicion)
+"Devolverá un char con el caracter que haya en la posición indicada.
+Idea: utilizad .charAt(...)
+método "public int longitud()"
+Dirá cuántos caracteres tiene la cadena.
+public void anexar(String cadena)
+Añadirá primero un espacio y, a continuación, la cadena indicada.
+Pero si el texto estaba vacío NO tendrá que añadir el citado espacio.
+public void recortar(int numCaracteres)
+Eliminará del final de la cadena el número de caracteres indicado.
+Si al final queda un espacio, lo quitará, también.
+Pista: podéis utilizar el método setLength() de StringBuilder.
+toString
+equals
+Se considera que dos Frase-s son iguales si contienen la misma cadena.
+¡Y las cadenas se comparan entre sí mediante equals, a su vez!
+clone
+Podéis clonar el StringBuilder, o podéis pedirle el toString al StringBuilder y usarlo para el nuevo objeto. Lo primero es mejor.
+Pero NO podéis usar el mismo objeto StringBuilder que ya tenemos. Es decir, NO podemos hacer clon.texto = this.texto.
+Por otro lado, crea un programa principal que cree algunos objetos Frase y utilice todos esos métodos.
